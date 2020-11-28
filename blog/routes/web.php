@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Stevebauman\Location\LocationServiceProvider;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('details', function () {
+
+	$ip = '50.90.0.1';
+    $data = \Location::get($ip);
+    dd($data->zipCode);
+   
+});
+
+Route::get
+ 
