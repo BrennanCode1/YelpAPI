@@ -26,5 +26,4 @@ Route::get('details', function () {
    
 });
 
-Route::get
  
